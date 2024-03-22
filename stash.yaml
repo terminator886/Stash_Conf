@@ -276,6 +276,20 @@ proxy-groups:
       - 韩国节点
       - DIRECT
 
+  - name: Slack
+    icon: https://raw.githubusercontent.com/terminator886/Stash_Conf/main/icons/slack.png
+    type: select
+    proxies:
+      - 手动切换
+      - 自动选择
+      - 香港节点
+      - 美国节点
+      - 狮城节点
+      - 日本节点
+      - 台湾节点
+      - 韩国节点
+      - DIRECT
+
   - name: 兜底分流
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/friestash.png
     type: select
@@ -298,7 +312,6 @@ proxy-groups:
     use:
       - Subscribe
     filter: "^(?=.*((?i)\U0001F1ED\U0001F1F0|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$"
-
 
   - name: 美国节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -329,7 +342,7 @@ proxy-groups:
     filter: "^(?=.*((?i)\U0001F1EF\U0001F1F5|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$"
 
   - name: 台湾节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     type: url-test
     lazy: true
     interval: 900
@@ -516,6 +529,8 @@ rules:
   - RULE-SET,TikTok,国际媒体
   - RULE-SET,ProxyGFW,国外网站
   - RULE-SET,Apple,苹果服务
+  - DOMAIN-SUFFIX,okta.com,Slack
+  - DOMAIN-SUFFIX,slack.com,Slack
   - RULE-SET,Lan,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,兜底分流
