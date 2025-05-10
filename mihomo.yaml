@@ -1,6 +1,6 @@
 proxy-groups:
   - name: 手动切换
-    icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/%24tash.png
     include-all: true
     type: select
 
@@ -8,11 +8,11 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
     type: select
     proxies:
-      - DIRECT
       - 手动切换
+      - DIRECT
 
-  - name: 漏网之鱼
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+  - name: 兜底分流
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/friestash.png
     type: select
     proxies:
       - 手动切换
@@ -89,20 +89,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  ChinaMedia:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list
-    path: ./ruleset/ChinaMedia.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  ProxyMedia:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list
-    path: ./ruleset/ProxyMedia.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   ProxyGFWlist:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list
     path: ./ruleset/ProxyGFWlist.list
@@ -148,4 +134,4 @@ rules:
   - "RULE-SET,ChinaCompanyIp,DIRECT"
   - "RULE-SET,Download,DIRECT"
   - "GEOIP,CN,DIRECT"
-  - "MATCH,漏网之鱼"
+  - "MATCH,兜底分流"
