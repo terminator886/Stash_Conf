@@ -117,6 +117,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  PicPakDownload:
+    url: https://raw.githubusercontent.com/terminator886/Stash_Conf/refs/heads/main/rules/picpak_dl.list
+    path: ./ruleset/picpak_dl.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
@@ -133,5 +140,6 @@ rules:
   - "RULE-SET,ChinaDomain,DIRECT"
   - "RULE-SET,ChinaCompanyIp,DIRECT"
   - "RULE-SET,Download,DIRECT"
+  - "RULE-SET,PicPakDownload,DIRECT"
   - "GEOIP,CN,DIRECT"
   - "MATCH,兜底分流"
