@@ -1,2 +1,2 @@
-DOMAIN-REGEX,dl-[^.]+\.mypikpak\.com
+DOMAIN-REGEX,^dl-[^.]+\.mypikpak\.com$
 DOMAIN-SUFFIX,dav.mypikpak.com
