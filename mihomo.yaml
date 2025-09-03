@@ -10,6 +10,13 @@ proxy-groups:
     proxies:
       - 手动切换
       - DIRECT
+  
+  - name: PikPak文件下载
+    icon: https://github.com/terminator886/Stash_Conf/blob/main/icons/pikpak.png?raw=true
+    type: select
+    proxies:
+      - 手动切换
+      - DIRECT
 
   - name: 兜底分流
     icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/friestash.png
@@ -131,7 +138,7 @@ rules:
   - "RULE-SET,BanAD,REJECT"
   - "RULE-SET,BanProgramAD,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
-  - "RULE-SET,PicPakDownload,DIRECT"
+  - "RULE-SET,PicPakDownload,PikPak文件下载"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,Origin,游戏平台"
   - "RULE-SET,Sony,游戏平台"
