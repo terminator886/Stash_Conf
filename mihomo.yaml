@@ -145,6 +145,7 @@ rule-providers:
     type: http
 
 rules:
+  - "AND,((NETWORK,UDP),(RULE-SET,AI)),REJECT"
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "RULE-SET,UnBan,DIRECT"
   - "RULE-SET,BanAD,REJECT"
