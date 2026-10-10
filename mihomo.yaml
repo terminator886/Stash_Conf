@@ -11,6 +11,11 @@ proxy-groups:
       - 手动切换
       - DIRECT
   
+  - name: AI
+    icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/%24tash.png
+    include-all: true
+    type: select
+
   - name: PikPak文件下载
     icon: https://github.com/terminator886/Stash_Conf/blob/main/icons/pikpak.png?raw=true
     type: select
@@ -26,6 +31,13 @@ proxy-groups:
       - DIRECT
 
 rule-providers:
+  AI:
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list
+    path: ./ruleset/AI.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
   LocalAreaNetwork:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
     path: ./ruleset/LocalAreaNetwork.list
@@ -138,6 +150,7 @@ rules:
   - "RULE-SET,BanAD,REJECT"
   - "RULE-SET,BanProgramAD,REJECT"
   - "RULE-SET,SteamCN,DIRECT"
+  - "RULE-SET,AI,AI"
   - "RULE-SET,PicPakDownload,PikPak文件下载"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,Origin,游戏平台"
