@@ -165,38 +165,22 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Download:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Download.list
-    path: ./ruleset/Download.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  PicPakDownload:
-    url: https://raw.githubusercontent.com/terminator886/Stash_Conf/refs/heads/main/rules/picpak_dl.list
-    path: ./ruleset/picpak_dl.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
 
 rules:
   - "RULE-SET,LocalAreaNetwork,DIRECT"
   - "RULE-SET,UnBan,DIRECT"
   - "RULE-SET,BanAD,REJECT"
   - "RULE-SET,BanProgramAD,REJECT"
-  - "AND,((NETWORK,UDP),(RULE-SET,AI)),REJECT"
   - "RULE-SET,SteamCN,DIRECT"
+  - "RULE-SET,ChinaDomain,DIRECT"
+  - "RULE-SET,ChinaCompanyIp,DIRECT"
+  - "GEOIP,CN,DIRECT"
+  - "NETWORK,UDP,REJECT-DROP"
   - "RULE-SET,AI,AI"
-  - "RULE-SET,PicPakDownload,PikPak文件下载"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,Origin,游戏平台"
   - "RULE-SET,Sony,游戏平台"
   - "RULE-SET,Steam,游戏平台"
   - "RULE-SET,Nintendo,游戏平台"
   - "RULE-SET,ProxyGFWlist,手动切换"
-  - "RULE-SET,ChinaDomain,DIRECT"
-  - "RULE-SET,ChinaCompanyIp,DIRECT"
-  - "RULE-SET,Download,DIRECT"
-  - "GEOIP,CN,DIRECT"
   - "MATCH,兜底分流"
